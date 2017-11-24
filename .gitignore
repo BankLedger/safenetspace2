@@ -1,0 +1,73 @@
+# Prerequisites
+*.d
+
+#mac
+.DS_Store
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# CLion
+.idea/
+cmake-build-debug/
+
+#Windows
+*.vcxproj
+*.filters
+*.sln
+
+CMakeFiles/
+cryptonote.dir/
+cryptonote_autogen/
+darknetspacewallet.dir/
+darknetspacewallet_autogen/
+Debug/
+qrencode.dir/
+Release/
+x64/
+
+ALL_BUILD.*
+cmake_install.cmake
+CMakeCache.txt
+CPackConfig.cmake
+CPackSourceConfig.cmake
+cryptonote.*
+CryptoNoteWalletConfig.h
+darknetspacewallet.*
+darknetspacewallet_autogen.*
+INSTALL.*
+PACKAGE.*
+qrc_resources.*
+qrencode.*
+ui_*.*
+version.h
+ZERO_CHECK.*
+version.h
+

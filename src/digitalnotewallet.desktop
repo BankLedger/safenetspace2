@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=darknetspace Wallet
+Comment=darknetspace wallet
+Exec=darknetspacewallet
+Terminal=false
+Type=Application
+Icon=darknetspace
+MimeType=x-scheme-handler/darknetspacewallet;
+Categories=Office;Finance;
