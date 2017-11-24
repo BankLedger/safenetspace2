@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BlockChainsFrame</class>
+ <widget class="QFrame" name="BlockChainsFrame">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>966</width>
+    <height>614</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Frame</string>
+  </property>
+  <property name="frameShape">
+   <enum>QFrame::StyledPanel</enum>
+  </property>
+  <property name="frameShadow">
+   <enum>QFrame::Raised</enum>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTreeView" name="m_blockchainsView">
+     <property name="sizeAdjustPolicy">
+      <enum>QAbstractScrollArea::AdjustIgnored</enum>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::CurrentChanged|QAbstractItemView::EditKeyPressed|QAbstractItemView::SelectedClicked</set>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="rootIsDecorated">
+      <bool>false</bool>
+     </property>
+     <property name="uniformRowHeights">
+      <bool>true</bool>
+     </property>
+     <property name="itemsExpandable">
+      <bool>false</bool>
+     </property>
+     <property name="sortingEnabled">
+      <bool>false</bool>
+     </property>
+     <attribute name="headerCascadingSectionResizes">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="headerShowSortIndicator" stdset="0">
+      <bool>false</bool>
+     </attribute>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLineEdit" name="lineEdit_height">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>400</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>400</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="m_SearchButton">
+       <property name="minimumSize">
+        <size>
+         <width>45</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>45</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Search</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_blocks_page">
+       <property name="minimumSize">
+        <size>
+         <width>50</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maxLength">
+        <number>4</number>
+       </property>
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_blocks_page">
+       <property name="minimumSize">
+        <size>
+         <width>110</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>110</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>blocks per page</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="m_EndButton">
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>30</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>|&lt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="m_PageLastButton">
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>30</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>&lt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_6">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Maximum</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>10</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_page">
+       <property name="minimumSize">
+        <size>
+         <width>50</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maxLength">
+        <number>6</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Maximum</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>10</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="m_PageNextButton">
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>30</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="m_FirstButton">
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>30</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>&gt;|</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../../resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>m_blockchainsView</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>BlockChainsFrame</receiver>
+   <slot>showBlockChainDetails(QModelIndex)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>414</x>
+     <y>287</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>414</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_FirstButton</sender>
+   <signal>clicked()</signal>
+   <receiver>BlockChainsFrame</receiver>
+   <slot>showFirstBlockChains()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>723</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>414</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_EndButton</sender>
+   <signal>clicked()</signal>
+   <receiver>BlockChainsFrame</receiver>
+   <slot>showLastestBlockChains()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>414</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_PageLastButton</sender>
+   <signal>clicked()</signal>
+   <receiver>BlockChainsFrame</receiver>
+   <slot>showLastBlockChains()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>246</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>414</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_SearchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>BlockChainsFrame</receiver>
+   <slot>SearchBlockChains()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>723</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>414</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_PageNextButton</sender>
+   <signal>clicked()</signal>
+   <receiver>BlockChainsFrame</receiver>
+   <slot>showNextBlockChains()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>583</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>414</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_blocks_page</sender>
+   <signal>returnPressed()</signal>
+   <receiver>BlockChainsFrame</receiver>
+   <slot>changeBlocksPerPage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>451</x>
+     <y>590</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>414</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_page</sender>
+   <signal>returnPressed()</signal>
+   <receiver>BlockChainsFrame</receiver>
+   <slot>turnPage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>590</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>414</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_blockchainsView</sender>
+   <signal>customContextMenuRequested(QPoint)</signal>
+   <receiver>BlockChainsFrame</receiver>
+   <slot>on_customContextMenuRequested(QPoint)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>482</x>
+     <y>291</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>482</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>showBlockChainDetails(QModelIndex)</slot>
+  <slot>showFirstBlockChains()</slot>
+  <slot>showLastestBlockChains()</slot>
+  <slot>showNextBlockChains()</slot>
+  <slot>showLastBlockChains()</slot>
+  <slot>SearchBlockChains()</slot>
+  <slot>changeBlocksPerPage()</slot>
+  <slot>turnPage()</slot>
+  <slot>on_customContextMenuRequested(QPoint)</slot>
+ </slots>
+</ui>

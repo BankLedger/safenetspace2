@@ -1,0 +1,17 @@
+
+// Copyright (c) 2014-2017 darknetspace developers
+// Distributed under the MIT/X11 software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+#pragma once
+
+#include "CryptoNoteConfig.h"
+
+namespace CryptoNote
+{
+#if SQ_TEST
+	const static boost::uuids::uuid CRYPTONOTE_NETWORK = { { 0x2E, 0xEF, 0xE3, 0xE3, 0xE5, 0xE0, 0x74, 0x65, 0x20, 0x69, 0x70, 0x73, 0x75, 0x6D, 0x20, 0x25 } };
+#else
+  const static boost::uuids::uuid CRYPTONOTE_NETWORK = { { 0x74, 0x36, 0x40, 0x74, 0x26, 0x40, 0x43, 0x23, 0x26, 0x19, 0x78, 0x04, 0x05, 0x22, 0x73, 0x39 } };
+#endif
+}
